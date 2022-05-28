@@ -1,0 +1,13 @@
+function spacex()
+    local Player = game.Players.LocalPlayer
+	for _,Player in pairs(game:GetService('Players'):GetChildren()) do
+		if Player.Character then
+			if Player.Character.Parent.Name == 'Players' then
+				if not Player.Character.UpperTorso:FindFirstChild('OriginalSize') then
+					Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👻]' .. Player.DisplayName)
+				end
+			end
+		end
+	end
+	end
+local success,err = pcall(spacex)
